@@ -13,6 +13,7 @@ packageStartupMessage(paste(
 "**********************************************\n",
 "LS2Wstat: Stationarity testing for LS2W fields\n\n",
 "--- Written by Sarah Taylor and Matt Nunes ---\n",
+"    --- Contributions from Idris Eckley ---\n",
 "Current package version: ",ver," (",curdate,") \n\n",
 "\n",
 "**********************************************\n",
