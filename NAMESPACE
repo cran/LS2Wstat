@@ -1,6 +1,6 @@
 import(LS2W)
 import(RandomFields)
-import(geoR)
+#import(geoR)
 import(matrixStats) 
 import(spdep)
 

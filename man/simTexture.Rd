@@ -19,7 +19,7 @@ The standard deviation of the increments of the LS2W process to be generated.
 The number of images to generate.
 }
   \item{imtype}{
-The type of image(s) to create.  Must be one of "S1","S2","S3","S4","S5", "NS1","NS2",
+The type of image(s) to create.  Must be one of "S1","S2","S3","S4", "NS1","NS2",
 "NS3", "NS4","NS5","NS6", "NS7".  See details for descriptions of the processes.
 }
   \item{\dots}{
@@ -27,7 +27,7 @@ Any other optional arguments needed for the image generation (see details).
 }
 }
 \details{
-Several different processes can be generated with the \code{simTexture} function.   The stationary processes are: a random normal process of specified standard deviation, \code{sd} (\code{S1}); a spatial moving average process with parameter \code{rho} (\code{S2}); an isotropic random field with a Matern covariance with shape parameter \code{nu} (\code{S3}); a Gaussian random field with exponential covariance, range parameter 2 (\code{S4}), and a \emph{diagonal Haar moving average} process of a specified order \code{order} and standard deviation \code{sd} (\code{S5}) (see the \code{\link[LS2W]{Haar2MA.diag}} function in the \code{LS2W} package for more details).\cr  
+Several different processes can be generated with the \code{simTexture} function.   The stationary processes are: a random normal process of specified standard deviation, \code{sd} (\code{S1}); a spatial moving average process with parameter \code{rho} (\code{S2}); an isotropic random field with a Matern covariance with shape parameter \code{nu} (\code{S3}) and a \emph{diagonal Haar moving average} process of a specified order \code{order} and standard deviation \code{sd} (\code{S4}) (see the \code{\link[LS2W]{Haar2MA.diag}} function in the \code{LS2W} package for more details).\cr  
 The nonstationary processes are: a random field with unit standard deviation on the first half-plane, concatenated with a random normal half-plane of standard deviation \code{sd} (\code{NS1}); a white noise half-plane concatenated with a Matern stationary process (\code{NS2}); a \emph{Haar Montage} of specified standard deviation \code{sd} (\code{NS3}) (see the \code{LS2W} \code{\link[LS2W]{HaarMontage}} function for more details);  a process with a slowly-varying covariance structure (\code{NS4}); a white noise process with a central subregion of random Normal deviates with non-unit standard deviation \code{sd} (\code{NS5}); a white noise process with a subregion of random Normal deviates with non-unit standard deviation in the middle section of the top left quadrant \code{sd} (\code{NS6}); the final process is similar to \code{NS5}, except that there is an additional texture in a subregion of the image.  In other words, the image is a montage of three two-dimensional Normal processes with differing standard deviations.  The base texture is again of unit variance, whereas the other two textures have standard deviations \code{sd} and 
 \code{sd2} (\code{NS7}).
 
@@ -35,7 +35,7 @@ The other optional arguments for \code{simTexture} are as follows:\cr
 \code{type} - the type of neighbourhood dependence for the random field, either \code{"queen"} or \code{"rook"} (see the \code{\link[spdep]{cell2nb}} function documentation in the \code{spdep} package for more details).\cr
 \code{rho} - moving average parameter for the process \code{S2}.\cr
 \code{nu} - shape parameter for the Matern covariance for process \code{S3}.\cr
-\code{order} - Haar moving average order for \code{S5}.\cr
+\code{order} - Haar moving average order for \code{S4}.\cr
 \code{fn}  - \code{scurve} or \code{lincurve} for \code{NS4}.\cr
 \code{start} - start value for \code{NS4} (passed into \code{scurve} or \code{lincurve}).\cr
 \code{end} - end value for \code{NS4} (passed into \code{scurve} or \code{lincurve}).\cr
@@ -68,7 +68,7 @@ Generating lots of images of high dimension may take a long time!
 }
 \examples{
 
-X1 <- simTexture(128,K=1,imtype="S5",order=3)
+X1 <- simTexture(128,K=1,imtype="S4",order=3)
 X2 <- simTexture(128,K=1,imtype="NS4",fn=lincurve,a=.25,start=1,end=2)
 X3 <- simTexture(128,K=1,imtype="NS5",sd=1.6,prop=.25)
 X4 <- simTexture(128,K=1,imtype="NS6",sd=1.6,prop=.25)

@@ -68,16 +68,16 @@ switch(imtype,
 			images[[i]]<-x
 		}
 	}, 
-	S4={
-		data<-grf(n^2,grid="reg",nugget=0.1,cov.model="exponential", cov.pars=c(sd^2,2))$data
-
-		data<-array(data,dim=c(n,n,K))
-
-		for(i in 1:K){
-			images[[i]]<-data[,,i]
-		}
-	},
-	S5 = {
+#	S4={
+#		data<-grf(n^2,grid="reg",nugget=0.1,cov.model="exponential", cov.pars=c(sd^2,2))$data
+#
+#		data<-array(data,dim=c(n,n,K))
+#
+#		for(i in 1:K){
+#			images[[i]]<-data[,,i]
+#		}
+#	},
+	S4 = {
         	for (i in 1:K) {
             		images[[i]] <- Haar2MA.diag(n, sd, ...)
         	}

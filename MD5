@@ -1,5 +1,5 @@
-661a1a0d1d01559330fc9d4f5869661d *DESCRIPTION
-4adf5c0a4d85004319a2e316295640a4 *NAMESPACE
+04e571d623970859fd9c4b0fdfe04023 *DESCRIPTION
+bd4a30da4e394d14cbc85deae37bb669 *NAMESPACE
 5e6c8b1d633510556154d55d769811d6 *R/TOS2D.R
 487e2d41244570ff4c735f3846cccd11 *R/avespecvar.R
 e5b773fd5ad3b010a508e7e249d49b32 *R/compareImages.R
@@ -14,7 +14,7 @@ dcd1290623461444bca906291cebff83 *R/lincurve.R
 7ae5f0f11b874bae7d5c9f0d782e46a0 *R/print.TOS2D.R
 7795ae2db6ea00c33479999a041aaba1 *R/print.imageQT.R
 d3c153d3943afeac6b8230f4a5f6fa2c *R/scurve.R
-1ff26c6c23ae9fa31af3b342287abda8 *R/simTexture.R
+5ce5ac543f61b16975817d3788c2339e *R/simTexture.R
 c738d20a179cb71804efd1f3a28a9528 *R/summary.TOS2D.R
 e478e13aaa8a9fc162416f1d3d0c42a6 *R/zzz.R
 4843bba8f51669733ff7dc61393e976c *man/LS2Wstat-package.Rd
@@ -32,4 +32,4 @@ c2473de3cd44cd4d9a8bb7dc0c37fb74 *man/plot.imageQT.Rd
 8f1414e1216dfc4b5287709fbeaeeeff *man/print.TOS2D.Rd
 8a0bd91cc8972fab5276732936c884ed *man/print.imageQT.Rd
 82f05112aa5e0cedf674dd5dd8ce7273 *man/scurve.Rd
-271c0abf8de7686e289bb94f529c3874 *man/simTexture.Rd
+5c705b7c272893a1c0c3d033f3682c2f *man/simTexture.Rd
