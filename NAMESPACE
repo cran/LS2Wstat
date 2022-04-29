@@ -1,8 +1,18 @@
 import(LS2W)
-import(RandomFields)
+#import(RandomFields)
 #import(geoR)
-import(matrixStats) 
-import(spdep)
+#import(spdep)
+
+importFrom("graphics", "segments")
+importFrom("graphics", "image")
+importFrom("stats", "medpolish", "rnorm")
+
+importFrom("matrixStats", rowVars) 
+importFrom("spdep","nb2listw")
+importFrom("spdep","cell2nb")
+importFrom("spdep","lag.listw")
+
+importFrom("RandomFields","GaussRF")
 
 S3method(plot, imageQT) 
 S3method(print, TOS2D) 
@@ -18,5 +28,4 @@ export(simTexture, lincurve, scurve)
 export(avespecvar,TOS2D)     
 export(plotmtx)
 export(getpval)
-importFrom("graphics", "segments")
-importFrom("stats", "medpolish", "rnorm")
+

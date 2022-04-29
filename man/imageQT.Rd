@@ -43,7 +43,7 @@ Sarah L. Taylor and Matt Nunes
 }
 \examples{
 # generate an image:
-X<-simTexture(128,K=1,imtype="NS2")[[1]]
+X<-simTexture(128,K=1,imtype="NS1", sd = 3)[[1]]
 
 \dontrun{XQT<-imageQT(X,binfun=TOS2D.bin)}
 
