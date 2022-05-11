@@ -60,14 +60,15 @@ switch(imtype,
 		}
 
  	},
-	S3={
-		s<-seq(0,1,length=n)
+#	S3={
+#		s<-seq(0,1,length=n)
+#
+#		for(i in 1:K){
+#			x<-GaussRF(s,s,model="matern",param=c(mean=0,variance=sd^2,nugget=0,scale=.5,nu=nu),grid=T)
+#			images[[i]]<-x
+#		}
+#	}, 
 
-		for(i in 1:K){
-			x<-GaussRF(s,s,model="matern",param=c(mean=0,variance=sd^2,nugget=0,scale=.5,nu=nu),grid=T)
-			images[[i]]<-x
-		}
-	}, 
 #	S4={
 #		data<-grf(n^2,grid="reg",nugget=0.1,cov.model="exponential", cov.pars=c(sd^2,2))$data
 #
@@ -89,16 +90,16 @@ switch(imtype,
             		images[[i]] <- cbind(a, b)
         	}
     	}, 
-	NS2 = {
-		s<-seq(0,1,length=n)
-
-		for(i in 1:K){
-			b1 <-GaussRF(s,s,model="matern",param=c(mean=0,variance=sd^2,nugget=0,scale=.5,nu=nu),grid=T)
-            		b <- matrix(rnorm(n^2, mean = 0, sd = sd), nrow = n, ncol = n, byrow = TRUE)
-			x<-cropimage(cbind(b,b1),newsize=n)
-			images[[i]]<-x
-		}
-	},
+#	NS2 = {
+#		s<-seq(0,1,length=n)
+#
+#		for(i in 1:K){
+#			b1 <-GaussRF(s,s,model="matern",param=c(mean=0,variance=sd^2,nugget=0,scale=.5,nu=nu),grid=T)
+#           		b <- matrix(rnorm(n^2, mean = 0, sd = sd), nrow = n, ncol = n, byrow = TRUE)
+#			x<-cropimage(cbind(b,b1),newsize=n)
+#			images[[i]]<-x
+#		}
+#	},
 	NS3 = {
         	for (i in 1:K) {
             		images[[i]] <- HaarMontage(n, sd = sd, ...)

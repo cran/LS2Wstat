@@ -60,7 +60,8 @@ Sarah L. Taylor and Matt Nunes
 }
 
 \section{Warning}{
-Generating lots of images of high dimension may take a long time!
+Generating lots of images of high dimension may take a long time!\cr
+Note that as of version 2.1-4 (2022-05-09), textures S3 and NS2 have been temporarily removed (commented out) from the functionality of this function, due to a broken package (\pkg{RandomFields}).
 } 
 
 \seealso{

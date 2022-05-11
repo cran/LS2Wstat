@@ -2,6 +2,7 @@ import(LS2W)
 #import(RandomFields)
 #import(geoR)
 #import(spdep)
+#importFrom("RandomFields","GaussRF")
 
 importFrom("graphics", "segments")
 importFrom("graphics", "image")
@@ -12,7 +13,6 @@ importFrom("spdep","nb2listw")
 importFrom("spdep","cell2nb")
 importFrom("spdep","lag.listw")
 
-importFrom("RandomFields","GaussRF")
 
 S3method(plot, imageQT) 
 S3method(print, TOS2D) 
