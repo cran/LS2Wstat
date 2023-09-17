@@ -8,17 +8,7 @@ Stationarity testing for locally stationary wavelet fields
 \description{
 This package contains functions for testing for stationarity within images, specifically locally stationary wavelet (LS2W) fields. In addition the package contains functions for implementing quadtree image decompositions, as well as code for simulating LS2W processes for a given spectral structure.
 }
-\details{
-\tabular{ll}{
-Package: \tab LS2Wstat\cr
-Type: \tab Package\cr
-Version: \tab 2.1\cr
-Date: \tab 2018-05-21\cr
-License: \tab GPL-2\cr
-LazyLoad: \tab yes\cr
-}
 
-}
 \author{
 Sarah L. Taylor and Matt Nunes
 
